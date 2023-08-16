@@ -22,6 +22,7 @@ const humidity = document.getElementById("humidity");
 const emoji = document.getElementById("emoji");
 tlacidlo.addEventListener("click",()=>{
     let value = bar.value;
+    bar.value = "";
     findCity(value)
     .then((weatherData) => {
         if(weatherData.current.temp_c>=26){

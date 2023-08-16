@@ -106,3 +106,7 @@ body {
     outline: 2px solid #0f62fe;
     outline-offset: -2px;
 }
+.shadow {
+  font-weight: bold;
+  text-shadow: 0px 4px 4px #282828;
+}
