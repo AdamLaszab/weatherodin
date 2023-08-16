@@ -19,11 +19,19 @@ const tlacidlo = document.getElementById("submitbutton");
 const city = document.getElementById("city");
 const temperature = document.getElementById("temperature");
 const humidity = document.getElementById("humidity");
-
+const emoji = document.getElementById("emoji");
 tlacidlo.addEventListener("click",()=>{
     let value = bar.value;
     findCity(value)
     .then((weatherData) => {
+        if(weatherData.current.temp_c>=26){
+            emoji.innerText="☀️";
+        }
+        else if(weatherData.current.temp_c>=17 &&weatherData.current.temp_c<26){
+            emoji.innerText="⛅";
+        }else{
+            emoji.innerText="☁️";
+        }
         city.innerText=weatherData.location.name;
         temperature.innerText=`${weatherData.current.temp_c}°C`;
         humidity.innerText=`${weatherData.current.humidity}%`;

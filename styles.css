@@ -18,7 +18,9 @@ body,html{
     align-items: center;
     gap: 3px;
 }
-
+#emoji{
+    font-size: 60px;
+}
 .button-3 {
   appearance: none;
   background-color: #e08e12;
